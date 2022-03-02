@@ -1,0 +1,23 @@
+.note{
+    max-width: 850px;
+    margin: 40px auto;
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.note p{
+    text-align: left;
+    line-height: 1.5em;
+}
+.note h2{
+    text-align: center;
+  margin: 20px auto 10px auto;
+  color: #333;
+}
+.note span{
+    color: #999;
+    font-size: 0.9em;
+    margin: 0 auto 40px auto;
+    display: block;
+}

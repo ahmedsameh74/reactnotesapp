@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom'
 export default function Create({uid}) {
     const [title, setTitle] = useState('')
     const [sub, setSub] = useState('')
+    // const [createdAt, setCreatedAt] = useState('')
     const {addDocument, response } = useFirestore('notes')
     const {color, mode} = useTheme()
     const history = useHistory()
@@ -14,10 +15,12 @@ export default function Create({uid}) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        // setCreatedAt(new Date().toLocaleString())
         addDocument({
             uid,
             title,
-            sub
+            sub,
+            // createdAt
         })
     }
 

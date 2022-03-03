@@ -16,6 +16,7 @@ export default function Home() {
     ['uid', '==', user.uid],
     ['createdAt', 'desc']    
     )
+    // console.log(user)
     // console.log(documents)
     // console.log(window.screen.width)
     

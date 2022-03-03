@@ -46,6 +46,7 @@ export default function Note() {
       <>
         <h2 style={{color: mode === 'light' ? '#333' : '#e0e0e0'}}>{note.title}</h2>
         <span>Created at: {note.createdAt.toDate().toLocaleString()}</span>
+        <hr style={{background: mode === 'light' ? '#dad9d9' : '#484848'}}/>
         <p style={{color: mode === 'light' ? '#333' : '#e0e0e0'}}>{note.sub}</p>
         <div className="share">
           {/* <FacebookShareButton url={window.location.href}>

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react"
 import { useHistory } from "react-router-dom"
 import { projectAuth } from "../firebase/config"
-// import { useAuthContext } from "./useAuthContext"
+import { useAuthContext } from "./useAuthContext"
 
 export const useSignup = () => {
     const [isCancelled, setIsCancelled] = useState(false)
     const [error, setError] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
-    // const {dispatch} = useAuthContext()
+    const {dispatch} = useAuthContext()
     const history = useHistory()
 
     const signup = async (email, password, displayName) => {
@@ -22,7 +22,13 @@ export const useSignup = () => {
                throw new Error('could not complete signup')
            }
            await res.user.updateProfile({displayName})
-           await projectAuth.currentUser.sendEmailVerification()
+           await projectAuth.currentUser.sendEmailVerification({
+               url: 'https://notestest-359bf.web.app/login'
+           })
+        //    dispatch({type: 'WAIT_VERIFY', payload: null, authIsReady: false})
+        //    console.log(res.user)
+        //    const ress = await res.user.emailVerified
+        //    console.log(ress)
            history.push('/login')
         //    setIsLoading(true)
         //    setError('please verify your mail')
@@ -41,6 +47,8 @@ export const useSignup = () => {
         //    }
            
         }catch(err){
+            setError(err.message)
+            setIsLoading(false)
             if(!isCancelled){
             console.log(err.message)
             setError(err.message)

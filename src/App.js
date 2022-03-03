@@ -12,7 +12,7 @@ import './App.css'
 import { useEffect } from 'react';
 
 function App() {
-  const {authIsReady, user} = useAuthContext()
+  const {authIsReady, user, verify} = useAuthContext()
   const {mode} = useTheme()
   useEffect(() => {
     document.body.style.background = mode === 'light'? '#dfdfdf' : '#333'

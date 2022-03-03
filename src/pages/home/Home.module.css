@@ -74,6 +74,14 @@
     font-size: 100px;
     /* position: absolute; */
 }
+.notes-list hr{
+    background: #484848;
+    border: none;
+    border-radius: 30px;
+    /* margin-bottom: 25px; */
+    width: 100%;
+    height: 2px;
+}
 @media screen and (max-width: 650px) {
     .notes-list{
         display: grid;

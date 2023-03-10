@@ -1,11 +1,11 @@
-##walkthrough notes
+## Walkthrough notes
 https://notestest-359bf.web.app/
 
-##description
+## Description
 write your own thoushts, update, delete, and choose between different themes.
 this application created with react js and styled with just css, firebase firestore for the server and the database
 
-##screenshots
+## Screenshots
 ![image](https://user-images.githubusercontent.com/83659148/224324265-9d4bd7d7-0842-45cb-bcaf-4e3b053d0c93.png)
 ![image](https://user-images.githubusercontent.com/83659148/224324352-4accc8e2-5b90-4a1b-87be-223164dcee36.png)
 ![image](https://user-images.githubusercontent.com/83659148/224324384-bd454129-1a7c-4b32-979f-92cc422c53a5.png)
